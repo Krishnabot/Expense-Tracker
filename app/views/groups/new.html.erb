@@ -1,2 +1,12 @@
-<h1>Groups#new</h1>
-<p>Find me in app/views/groups/new.html.erb</p>
+<h1>NEW CATEGORIE</h1>
+<%= form_with model: categorie, url: groups_path, method: :post, local: true, scope: :new_categorie do |f| %>
+  <div>
+    <%= f.text_field :name, placeholder: "Categorie name" %>
+  </div>
+  <div>
+    <%= f.label :icon %><br>
+    <%= f.file_field :icon %>
+  </div>
+
+  <%= f.submit "Add Categorie" %>
+<% end %>

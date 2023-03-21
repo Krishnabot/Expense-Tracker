@@ -1,2 +1,14 @@
-<h1>Groups#index</h1>
-<p>Find me in app/views/groups/index.html.erb</p>
+<section>
+  <h1>CATEGORIES</h1>
+  <% @categories.each do |categorie| %>
+    <%= link_to group_path(categorie.id) do %>
+      <div>
+        <%= image_tag categorie.icon %>
+      </div>
+      <div>
+        <p><%= categorie.name %></p>
+      </div>
+    <% end %>
+  <% end %>
+  <%= link_to "Add new Category", new_group_path %>
+</section>
