@@ -6,7 +6,7 @@ class GroupsController < ApplicationController
 
   def show
     @category = Group.find(params[:id])
-    @expenses = @category.expenses
+    @expenses = @category.expenses.order(created_at: :desc)
   end
 
   def new
