@@ -1,8 +1,5 @@
 Rails.application.routes.draw do
-  get 'groups/index'
-  get 'groups/show'
-  get 'groups/new'
-  devise_for :users, controllers: { registrations: 'users/registrations' }
+devise_for :users, controllers: { registrations: 'users/registrations' }, sign_out_via: [:get, :delete]
      resources :group_operations
-   root "groups#index"
+   root "landing_page#index"
 end

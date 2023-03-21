@@ -1,0 +1,18 @@
+<h1>Expense Tracker</h1>
+<% if user_signed_in? %>
+  <h3>Wecome</h3>
+  <strong><%= current_user.name %></strong>
+
+  <small>(<%= current_user.email %>)</small>
+  <%= link_to destroy_user_session_path, method: :delete, :class => 'navbar-link' do %>
+    <button class="btn log-out">LOG OUT</button>
+  <% end %>
+<% else %>
+  <%= link_to new_user_session_path, :class => 'navbar-link' do %>
+    <button class="btn log-in">LOG IN</button>
+  <% end %>
+  <br>
+  <%= link_to new_user_registration_path, :class => 'navbar-link' do %>
+    <button class="btn sign-up">SIGN UP</button>
+  <% end %>
+<% end %>
