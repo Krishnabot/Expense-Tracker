@@ -50,8 +50,6 @@ gem 'bootsnap', require: false
 
 gem 'factory_bot_rails'
 
-gem 'capybara'
-
 # Use Sass to process CSS
 # gem "sassc-rails"
 
