@@ -5,6 +5,8 @@ class GroupsController < ApplicationController
   end
 
   def show
+    @category = Group.find(params[:id])
+    @expenses = @category.expenses
   end
 
   def new

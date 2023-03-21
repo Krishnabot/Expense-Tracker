@@ -1,2 +1,33 @@
-<h1>Groups#show</h1>
-<p>Find me in app/views/groups/show.html.erb</p>
+<section>
+  <div>
+    <%= link_to groups_path do %>
+    <% end %>
+    <h1><%= @category.name %>:<br>Transactions List</h1>
+    <%= link_to destroy_user_session_path, method: :delete do %>
+    <% end %>
+  </div>
+
+  <% if notice %>
+    <p class="alert alert-success"><%= notice %></p>
+  <% end %>
+  <% if alert %>
+    <p class="alert alert-danger"><%= alert %></p>
+  <% end %>
+
+  <div>
+    <p>
+      Total expenses:
+      <%= number_to_currency(@category.expenses.sum(:amount)) %>
+    </p>
+  </div>
+
+  <div>
+    <% @expenses.each do |expense| %>
+      <%= render partial: "expense", locals: { expense: expense } %>
+    <% end %>
+  </div>
+
+  <div>
+    <%= link_to "Add New Transaction", new_group_expense_path(@category.id) %>
+  </div>
+</section>
