@@ -1,5 +1,5 @@
 class ExpensesController < ApplicationController
-before_action :authenticate_user!
+  before_action :authenticate_user!
   before_action :set_user
   before_action :set_group
   before_action :set_expense, only: %i[show edit update destroy]
@@ -11,8 +11,8 @@ before_action :authenticate_user!
     expense = Expense.new
     expense.group_ids = @group.id
     respond_to do |format|
-      format.html { render :new, locals: { expense: expense } }
-    end  
+      format.html { render :new, locals: { expense: } }
+    end
   end
 
   def create
@@ -21,11 +21,11 @@ before_action :authenticate_user!
     respond_to do |format|
       format.html do
         if new_expense.save
-          flash[:notice] = "Transaction saved successfully"
+          flash[:notice] = 'Transaction saved successfully'
           redirect_to group_path(new_expense.group_ids)
         else
-          flash.now[:alert] = "Error: transaction could not be saved"
-          render :new, locals: { expense: expense }
+          flash.now[:alert] = 'Error: transaction could not be saved'
+          render :new, locals: { expense: }
         end
       end
     end

@@ -1,7 +1,7 @@
 class GroupsController < ApplicationController
-    before_action :authenticate_user!
+  before_action :authenticate_user!
   def index
-    @categories = current_user.groups 
+    @categories = current_user.groups
   end
 
   def show
@@ -12,8 +12,8 @@ class GroupsController < ApplicationController
   def new
     categorie = Group.new
     respond_to do |format|
-      format.html { render :new, locals: { categorie: categorie } }
-    end  
+      format.html { render :new, locals: { categorie: } }
+    end
   end
 
   def create
@@ -22,11 +22,11 @@ class GroupsController < ApplicationController
     respond_to do |format|
       format.html do
         if new_categorie.save
-          flash[:notice] = "Success: Categorie saved successfully"
+          flash[:notice] = 'Success: Categorie saved successfully'
           redirect_to groups_path
         else
-          flash.now[:alert] = "Fail: Categorie could not be saved"
-          render :new, locals: { categorie: categorie }
+          flash.now[:alert] = 'Fail: Categorie could not be saved'
+          render :new, locals: { categorie: }
         end
       end
     end
