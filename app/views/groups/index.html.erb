@@ -1,15 +1,19 @@
-<section>
+<div class="section-wrap">
   <%= render partial: "shared/navbar" %>
-  <h1>CATEGORIES</h1>
-  <% @categories.each do |categorie| %>
-    <%= link_to group_path(categorie.id) do %>
-      <div>
-        <%= image_tag categorie.icon %>
-      </div>
-      <div>
-        <p><%= categorie.name %></p>
-      </div>
-    <% end %>
-  <% end %>
-  <%= link_to "Add new Category", new_group_path %>
-</section>
+  <section id="group-index">
+    <h1>CATEGORIES</h1>
+    <div class="group-card">
+      <% @categories.each do |categorie| %>
+        <%= link_to group_path(categorie.id), class: "card-item" do %>
+          <div>
+            <%= image_tag categorie.icon %>
+          </div>
+          <div>
+            <p><%= categorie.name %></p>
+          </div>
+        <% end %>
+      <% end %>
+      <%= link_to "Add new Category", new_group_path, class: "add-btn" %>
+    </div>
+  </section>
+</div>

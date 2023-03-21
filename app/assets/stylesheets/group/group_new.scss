@@ -1,0 +1,28 @@
+#group-new {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    margin-top: 2rem;
+}
+
+#group-new h1 {
+    font-size: 2rem;
+    margin-top: 0;
+}
+
+#group-new form {
+    margin-top: 2rem;
+}
+
+#group-new input[type="text"],
+#group-new input[type="file"] {
+    display: block;
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+}

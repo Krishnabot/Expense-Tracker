@@ -1,4 +1,5 @@
 <%= render "shared/navbar" %>
+<div id = "group-new" class="section-wrap">
 <h1>NEW CATEGORIE</h1>
 <%= form_with model: categorie, url: groups_path, method: :post, local: true, scope: :new_categorie do |f| %>
   <div>
@@ -9,5 +10,6 @@
     <%= f.file_field :icon %>
   </div>
 
-  <%= f.submit "Add Categorie" %>
+<%= f.submit "Add Categorie", class: "add-btn" %>
 <% end %>
+</div>

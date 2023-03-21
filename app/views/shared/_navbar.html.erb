@@ -2,10 +2,10 @@
   <% if user_signed_in? %>
     <div>
       <%= link_to root_path, class:"col" do %>
-        <button class="btn log-out">Back</button>
+        <button class="btn go-back">Back</button>
       <% end %>
     </div>
-    <div>
+    <div class ="user-info">
       <strong><%= current_user.name %></strong>
       <small>(<%= current_user.email %>)</small>
     </div>

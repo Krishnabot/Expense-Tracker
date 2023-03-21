@@ -1,3 +1,4 @@
+<div  id = "expense-new"class="section-wrap">
 <%= render partial: "shared/navbar" %>
 <h1>NEW TRANSACTION</h1>
 <%= form_with model: expense, url: group_expenses_path, method: :post, local: true, scope: :new_expense do |f| %>
@@ -20,3 +21,4 @@
 
   <%= f.submit "Add Transaction" %>
 <% end %>
+</div>
