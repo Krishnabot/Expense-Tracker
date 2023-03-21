@@ -1,21 +1,22 @@
-1>NEW TRANSACTION</h1>
+<%= render partial: "shared/navbar" %>
+<h1>NEW TRANSACTION</h1>
 <%= form_with model: expense, url: group_expenses_path, method: :post, local: true, scope: :new_expense do |f| %>
 
   <div>
-    <%= f.text_field :name, placeholder: 'Transaction name' %>
+    <%= f.text_field :name, placeholder: "Transaction name" %>
   </div>
 
   <div>
-    <%= f.number_field :amount, placeholder: 'Amount' %>
+    <%= f.number_field :amount, placeholder: "Amount" %>
   </div>
 
   <div>
     <%= f.label :category, "Select the category" %>
     <br>
-    <%= f.collection_check_boxes(:group_ids, @user.groups.order( 'name ASC' ), :id, :name)%>
+    <%= f.collection_check_boxes(:group_ids, @user.groups.order("name ASC"), :id, :name) %>
     <%# generate a select tag with options %>
     <%# <%= f.collection_select :group_ids, @groups, :id, :name, {}, { multiple: true } %>
   </div>
 
   <%= f.submit "Add Transaction" %>
-<% end %> 
+<% end %>

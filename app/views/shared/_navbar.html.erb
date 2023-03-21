@@ -1,0 +1,18 @@
+<nav id="mainNavigation">
+  <% if user_signed_in? %>
+    <div>
+      <%= link_to root_path, class:"col" do %>
+        <button class="btn log-out">Back</button>
+      <% end %>
+    </div>
+    <div>
+      <strong><%= current_user.name %></strong>
+      <small>(<%= current_user.email %>)</small>
+    </div>
+    <div>
+      <%= link_to destroy_user_session_path, method: :delete, :class => 'navbar-link' do %>
+        <button class="btn log-out">LOG OUT</button>
+      <% end %>
+    </div>
+  <% end %>
+</nav>

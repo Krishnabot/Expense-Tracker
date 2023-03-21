@@ -1,3 +1,4 @@
+<%= render partial: "shared/navbar" %>
 <section>
   <div>
     <%= link_to groups_path do %>
@@ -21,7 +22,7 @@
     </p>
   </div>
 
-  <div>
+    div>
     <% @expenses.each do |expense| %>
       <%= render partial: "expense", locals: { expense: expense } %>
     <% end %>

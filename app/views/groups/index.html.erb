@@ -1,4 +1,5 @@
 <section>
+  <%= render partial: "shared/navbar" %>
   <h1>CATEGORIES</h1>
   <% @categories.each do |categorie| %>
     <%= link_to group_path(categorie.id) do %>
