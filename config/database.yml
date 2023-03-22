@@ -39,7 +39,5 @@ test:
 
 production:
   <<: *default
-  database: expense_tracker_production
-  username: expense_tracker
-  password: <%= ENV["EXPENSE_TRACKER_DATABASE_PASSWORD"] %>
+  url: <%= ENV['DATABASE_URL'] %>
   
