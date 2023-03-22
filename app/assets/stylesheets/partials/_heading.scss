@@ -1,13 +1,11 @@
 @import '../partials/fonts';
-.new-h1 {
-font-family: 'Montserrat', sans-serif;
+@import '../partials/variables';
+.heading {
+font-family: 'Proxima_Nova_Bold', sans-serif;
     font-size: 2rem;
-    font-weight: bold;
     text-align: center;
     margin-top: 2rem;
-    background: linear-gradient(to bottom, #020b60, #aad0db);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: $text-color;
 }
 
 .devise-headings {

@@ -1,6 +1,6 @@
 <%= render partial: "shared/navbar" %>
 <div  id = "expense-new"class="section-wrap">
-<h1>NEW TRANSACTION</h1>
+<h1 class = "heading">NEW TRANSACTION</h1>
 <%= form_with model: expense, url: group_expenses_path, method: :post, local: true, scope: :new_expense do |f| %>
 
   <div>
