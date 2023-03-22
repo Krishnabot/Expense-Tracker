@@ -13,13 +13,11 @@
   - [Install](#install)
   - [Usage](#usage)
   - [Run tests](#run-tests)
-  - [Deployment](#triangular_flag_on_post-deployment)
 - [👥 Authors](#authors)
 - [🔭 Future Features](#future-features)
 - [🤝 Contributing](#contributing)
 - [⭐️ Show your support](#support)
 - [🙏 Acknowledgements](#acknowledgements)
-- [❓ FAQ (OPTIONAL)](#faq)
 - [📝 License](#license)
 
 # 📖 [Expense Tracker] <a name="about-project"></a>
@@ -53,9 +51,9 @@
 
 ### Key Features <a name="key-features"></a>
 
-- **[User can signup and login]**
-- **[User can create expense categories]**
-- **[User can create expenses and select categories for them]**
+- **User can signup and login**
+- **User can create expense categories**
+- **User can create expenses and select categories for them**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -100,7 +98,7 @@ Example command:
 
 You will need to create a database and run the migrations.
 At this moment the project expects you to have a database
-named `recipe_app_development`. You can create this database
+named `expense_tracker_development`. You can create this database
 and generate the migrations by running the following command:
 
 ```sh
@@ -149,23 +147,19 @@ Feel free to check the [issues page](https://github.com/Krishnabot/Expense-Track
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- SUPPORT -->
 
 ## ⭐️ Show your support <a name="support"></a>
 
-> Write a message to encourage readers to support your project
 
-If you like this project...
+If you like this project Please give a ⭐️
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- ACKNOWLEDGEMENTS -->
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
 - Original design idea by [Gregoire Vella on Behance](https://www.behance.net/gregoirevella), author of the [original idea](https://www.behance.net/gallery/19759151/Snapscan-iOs-design-and-branding?tracking_source=)
 
-I would like to thank my peers for their support and advices
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
