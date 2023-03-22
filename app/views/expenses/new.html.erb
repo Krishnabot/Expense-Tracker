@@ -1,22 +1,22 @@
-<div  id = "expense-new"class="section-wrap">
 <%= render partial: "shared/navbar" %>
+<div  id = "expense-new"class="section-wrap">
 <h1>NEW TRANSACTION</h1>
 <%= form_with model: expense, url: group_expenses_path, method: :post, local: true, scope: :new_expense do |f| %>
 
   <div>
-    <%= f.text_field :name, placeholder: "Transaction name" %>
+    <%= f.text_field :name, placeholder: "Transaction name",  class: "form-controll" %>
   </div>
 
   <div>
-    <%= f.number_field :amount, placeholder: "Amount" %>
+    <%= f.number_field :amount, placeholder: "Amount",  class: "form-controll" %>
   </div>
 
   <div>
-    <%= f.label :category, "Select the category" %>
+    <%= f.label :category, "Select the Expense category" %>
     <br>
     <%= f.collection_check_boxes(:group_ids, @user.groups.order("name ASC"), :id, :name) %>
   </div>
 
-  <%= f.submit "Add Transaction" %>
+  <%= f.submit "Add Transaction", class: "add-btn" %>
 <% end %>
 </div>

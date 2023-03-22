@@ -1,20 +1,19 @@
-<div id = "group-show" class= "section-wrap">
 <%= render partial: "shared/navbar" %>
+
+<div id = "group-show" class= "section-wrap">
 <section>
   <div>
     <%= link_to groups_path do %>
     <% end %>
-    <h1><%= @category.name %>:<br>Transactions List</h1>
+    <div class = "icon-tile">
+        <%= image_tag @category.icon %>
+        <p>Group: <%= @category.name %></p>
+    <div>
     <%= link_to destroy_user_session_path, method: :delete do %>
     <% end %>
   </div>
 
-  <% if notice %>
-    <p class="alert alert-success"><%= notice %></p>
-  <% end %>
-  <% if alert %>
-    <p class="alert alert-danger"><%= alert %></p>
-  <% end %>
+
 
   <div>
     <p>
@@ -23,13 +22,13 @@
     </p>
   </div>
 
-    div>
+    <div class ="expenses-tiles-wrap">
     <% @expenses.each do |expense| %>
       <%= render partial: "expense", locals: { expense: expense } %>
     <% end %>
   </div>
 
-  <div>
+  <div  class = "add-btn">
     <%= link_to "Add New Transaction", new_group_expense_path(@category.id) %>
   </div>
 </section>
