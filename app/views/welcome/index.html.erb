@@ -1,0 +1,22 @@
+<section class="app-section">
+  <div class="app-title">
+    <%= image_tag "logo.png" %>
+  </div>
+
+  <div class="welcome-btns">
+    <% if user_signed_in? %>
+      <%= link_to "Groups", group_path, class: "btn-primary" %>
+      <%= link_to "LOG OUT",
+      destroy_user_session_path,
+      method: :delete,
+      class: "btn-secondary" %>
+    <% else %>
+      <%= link_to new_user_session_path do %>
+        <button class="btn-primary">LOG IN</button>
+      <% end %>
+      <%= link_to new_user_registration_path do %>
+        <button class="btn-secondary">SIGN UP</button>
+      <% end %>
+    <% end %>
+  </div>
+</section>
