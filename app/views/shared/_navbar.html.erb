@@ -1,10 +1,11 @@
 <nav id="mainNavigation">
-  <% if user_signed_in? %>
-    <div>
+      <div>
       <%= link_to root_path, class:"col" do %>
         <button class="btn go-back">Back</button>
       <% end %>
     </div>
+  <% if user_signed_in? %>
+
     <div class ="user-info">
       <strong><%= current_user.name %></strong>
       <small>(<%= current_user.email %>)</small>
