@@ -26,4 +26,4 @@ RSpec.describe Group, type: :model do
       expect(@expense).to_not be_valid
     end
   end
-end 
+end

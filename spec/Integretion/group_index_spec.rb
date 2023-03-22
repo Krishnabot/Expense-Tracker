@@ -10,7 +10,6 @@ RSpec.describe 'Groups index page', type: :feature do
       icon: Rack::Test::UploadedFile.new('spec/support/test_image.jpeg', 'image/jpeg'),
       user_id: @user.id
     )
-
   end
 
   describe 'the group index page' do

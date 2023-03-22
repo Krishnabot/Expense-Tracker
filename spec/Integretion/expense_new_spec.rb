@@ -18,7 +18,6 @@ RSpec.describe 'Expense New Page ', type: :feature do
     )
 
     @group.expenses << @expense
-
   end
 
   describe 'Group show page' do

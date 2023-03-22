@@ -1,55 +1,55 @@
 @import '../partials/variables';
+
 .app-section {
-    height: 100vh;
+  height: 100vh;
 }
 
 .app-title {
-    height: 70vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .app-title img {
-    width: 25rem;
-    height: 5rem;
+  width: 25rem;
+  height: 5rem;
 }
 
-
 .welcome-btns {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .welcome-btns a {
-text-decoration: none;
+  text-decoration: none;
 }
 
 .btn-primary {
-display: block;
-    width: 25rem;
-    margin-bottom: 2rem;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    font-size: 18px;
-    font-weight: bold;
-    text-align: center;
-    text-decoration: none;
-    cursor: pointer;
-    background-color:$devise-btn-background;
-    color: $white;
+  display: block;
+  width: 25rem;
+  margin-bottom: 2rem;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  background-color: $devise-btn-background;
+  color: $white;
 }
 
 .btn-primary:hover {
-    background-color: #0062cc;
+  background-color: #0062cc;
 }
 
 .btn-secondary {
-    color: $slight-grey;
-        font-size: 18px;
-        background-color: transparent;
-        border: none;
-        cursor: pointer;
+  color: $slight-grey;
+  font-size: 18px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
 }

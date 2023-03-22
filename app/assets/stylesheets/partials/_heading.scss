@@ -1,16 +1,17 @@
 @import '../partials/fonts';
 @import '../partials/variables';
+
 .heading {
-font-family: 'Proxima_Nova_Bold', sans-serif;
-    font-size: 2rem;
-    text-align: center;
-    margin-top: 2rem;
-    color: $text-color;
+  font-family: 'Proxima_Nova_Bold', sans-serif;
+  font-size: 2rem;
+  text-align: center;
+  margin-top: 2rem;
+  color: $text-color;
 }
 
 .devise-headings {
-    font-family: 'Proxima_Nova_Bold', sans-serif;
-    font-size: 3rem;
-    color: #020b60;
-    text-align: center;
+  font-family: 'Proxima_Nova_Bold', sans-serif;
+  font-size: 3rem;
+  color: #020b60;
+  text-align: center;
 }
