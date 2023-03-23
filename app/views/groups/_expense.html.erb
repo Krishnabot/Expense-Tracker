@@ -1,9 +1,15 @@
-<div  class = "card-item">
-  <p>
-    <%= expense.name %>
-  </p>
-
-  <p>
-    <%= number_to_currency(expense.amount) %>
-  </p>
+<div class="card-item">
+  <div class="card-item-left">
+    <p>
+      <%= expense.name %>
+    </p>
+    <small>
+      <%= expense.created_at.strftime("%d %B %Y") %>
+    </small>
+  </div>
+  <div class="card-item-right">
+    <p class="bold-text">
+      <%= number_to_currency(expense.amount) %>
+    </p>
+  </div>
 </div>

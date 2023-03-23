@@ -1,29 +1,17 @@
 <%= render partial: "shared/navbar" %>
 
+    <div class ="heading">
+        <p>Total expenses: </p>
+        <p class = "bold-text"><%= number_to_currency(@category.expenses.sum(:amount))%></p>
+   
+    </div>
+
 <div id = "group-show" class= "section-wrap">
 <section>
   <div>
-    <%= link_to groups_path do %>
-    <% end %>
-    <div class = "icon-tile">
-        <%= image_tag @category.icon %>
-        <p>Group: <%= @category.name %></p>
-    <div>
-    <%= link_to destroy_user_session_path, method: :delete do %>
-    <% end %>
-  </div>
-
-
-
-  <div>
-    <p>
-      Total expenses:
-      <%= number_to_currency(@category.expenses.sum(:amount)) %>
-    </p>
-  </div>
-
+  
     <div class ="expenses-tiles-wrap">
-    <% @expenses.each do |expense| %>
+ <% @expenses.each do |expense| %>
       <%= render partial: "expense", locals: { expense: expense } %>
     <% end %>
   </div>

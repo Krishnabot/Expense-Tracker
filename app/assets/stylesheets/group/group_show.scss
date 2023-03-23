@@ -1,8 +1,8 @@
 @import '../partials/variables';
 
 #group-show {
-  background-color: #fff;
-  padding: 20px;
+  background-color: #ececec;
+  padding: 1rem;
 }
 
 #group-show section {
@@ -47,11 +47,12 @@
   border: 1px solid #f5c6cb;
 }
 
-.icon-tile p {
-  font-size: 1.5rem;
-  font-weight: 400;
-  margin-top: 10px;
-  margin-bottom: 0;
+.card-item-left p {
+  margin-right: 10px;
+}
+
+.card-item-right p {
+  margin-left: 10px;
 }
 
 #group-show p {
@@ -84,18 +85,15 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 2rem;
 }
 
-.icon-tile {
+.card-item-left {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 20px;
 }
 
-.icon-tile img {
-  max-width: 100%;
-  height: auto;
+.card-item-left small {
+  font-size: 12px;
 }

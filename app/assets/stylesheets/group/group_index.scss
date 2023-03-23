@@ -12,12 +12,13 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  padding: 16px;
+  background-color: #ececec;
+  padding: 1rem;
 }
 
 .card-item img {
-  max-width: 80px;
-  max-height: 80px;
+  width: 60px;
+  height: 60px;
   margin: 16px 0;
 }
 
@@ -30,4 +31,9 @@
 
 .card-item p {
   font-size: 16px;
+}
+
+.group-heading {
+  border-bottom: none !important;
+  box-shadow: none !important;
 }

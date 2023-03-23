@@ -1,7 +1,9 @@
 <%= render "shared/navbar" %>
 
 <div id="group-index">
-  <h1 class = "heading">CATEGORIES</h1>
+<div class = "heading group-heading">
+  <h1>CATEGORIES</h1>
+  </div>
   <div class="group-card">
     <% @categories.each do |categorie| %>
       <%= link_to group_path(categorie.id), class: "card-item" do %>
