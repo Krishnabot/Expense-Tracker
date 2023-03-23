@@ -1,0 +1,35 @@
+@import 'variables';
+
+.btn {
+  border: none;
+  background-color: transparent;
+  color: $white;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-right: 0.5rem;
+  padding: 0.5rem 1rem;
+  transition: background-color 0.2s ease;
+}
+
+.add-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 24px !important;
+  font-size: 2rem;
+  text-align: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: $white;
+  background-color: $app-btn-background !important;
+  border: 0.1px solid $white !important;
+  border-radius: 0 !important;
+  box-shadow: 0 0 0 20px $app-btn-background;
+  text-decoration: none;
+  margin-top: 2rem;
+  height: 40px;
+  width: 22rem;
+
+  &:hover {
+    background-color: #4c9121;
+  }
+}

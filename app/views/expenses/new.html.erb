@@ -1,0 +1,25 @@
+<%= render partial: "shared/navbar" %>
+<div class = "heading group-heading">
+  <h1>New Transaction</h1>
+  </div>
+<div  id = "expense-new"class="section-wrap">
+
+<%= form_with model: @expense, url: group_expenses_path, method: :post, local: true, scope: :new_expense do |f| %>
+
+  <div>
+    <%= f.text_field :name, placeholder: "Transaction name",  class: "form-controll" %>
+  </div>
+
+  <div>
+    <%= f.number_field :amount, placeholder: "Amount",  class: "form-controll" %>
+  </div>
+
+  <div>
+    <%= f.label :category, "Select the Expense category" %>
+    <br>
+    <%= f.collection_check_boxes(:group_ids, @user.groups.order("name ASC"), :id, :name) %>
+  </div>
+
+  <%= f.submit "Add Transaction", class: "add-btn" %>
+<% end %>
+</div>

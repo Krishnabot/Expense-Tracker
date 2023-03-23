@@ -1,0 +1,21 @@
+@import '../partials/fonts';
+@import '../partials/variables';
+
+.devise-headings {
+  font-family: 'Proxima_Nova_Bold', sans-serif;
+  font-size: 3rem;
+  color: #020b60;
+  text-align: center;
+}
+
+.bold-text {
+  font-weight: bold;
+}
+
+.heading {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem;
+  border-bottom: 0.5px  solid rgb(110, 108, 108);
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+}

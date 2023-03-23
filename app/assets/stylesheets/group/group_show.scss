@@ -1,0 +1,99 @@
+@import '../partials/variables';
+
+#group-show {
+  background-color: #ececec;
+  padding: 1rem;
+}
+
+#group-show section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#group-show h1 {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#group-show a {
+  color: $white;
+  text-decoration: none;
+}
+
+#group-show a:hover {
+  text-decoration: underline;
+}
+
+#group-show .alert {
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  text-align: center;
+}
+
+#group-show .alert-success {
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+#group-show .alert-danger {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
+.card-item-left p {
+  margin-right: 10px;
+}
+
+.card-item-right p {
+  margin-left: 10px;
+}
+
+#group-show p {
+  font-size: 16px;
+  margin: 10px 0;
+  text-align: center;
+}
+
+#group-show .expense {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #ccc;
+}
+
+#group-show .expense .description {
+  flex: 1;
+  margin-right: 10px;
+}
+
+#group-show .expense .amount {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+#group-show .expenses-tiles-wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.card-item-left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card-item-left small {
+  font-size: 12px;
+}

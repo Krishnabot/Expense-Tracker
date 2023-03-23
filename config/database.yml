@@ -26,19 +26,18 @@ development:
   encoding: unicode
   database: expense_tracker_development
   pool: 5
-  username: admin
-  password: admin
+  username: postgres
+  password: postgres
 
 test:
   adapter: postgresql
   encoding: unicode
   database: expense_tracker_test
   pool: 5
-  username: admin
-  password: admin
+  username: postgres
+  password: postgres
 
 production:
   <<: *default
-  database: expense_tracker_production
-  username: expense_tracker
-  password: <%= ENV["EXPENSE_TRACKER_DATABASE_PASSWORD"] %>
+  url: <%= ENV['DATABASE_URL'] %>
+  

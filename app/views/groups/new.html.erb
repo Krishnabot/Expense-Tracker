@@ -1,0 +1,15 @@
+<%= render "shared/navbar" %>
+<h1 class = "heading">NEW CATEGORIE</h1>
+
+<div id = "group-new" class="section-wrap">
+<%= form_with model: @categorie, url: groups_path, method: :post, local: true, scope: :new_categorie do |f| %>
+  <div>
+    <%= f.text_field :name, placeholder: "Categorie name", class: "form-controll" %>
+  </div>
+  <div>
+    <%= f.file_field :icon, class: "form-controll" %>
+  </div>
+
+<%= f.submit "Add Categorie", class: "add-btn" %>
+<% end %>
+</div>

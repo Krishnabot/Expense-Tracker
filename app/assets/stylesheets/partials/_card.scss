@@ -1,0 +1,23 @@
+@import '../partials/variables';
+
+.card-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  text-align: center;
+  width: 20rem;
+  height: 6rem;
+  background-color: #fff;
+  text-decoration: none;
+  border: 1px solid $white;
+  color: #333;
+  transition: all 0.3s ease;
+  padding: 0 2em;
+  margin-top: 0.5em;
+  align-items: center;
+
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  }
+}

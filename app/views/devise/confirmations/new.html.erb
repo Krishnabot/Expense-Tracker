@@ -1,0 +1,27 @@
+<%= render partial: "shared/navbar" %>
+<div class ="devise-view">
+<h1 class ="devise-headings"> Resend confirmation?</h1>
+
+<%= form_for(resource, as: resource_name, url: confirmation_path(resource_name), html: { method: :post }) do |f| %>
+  <%= render "devise/shared/error_messages", resource: resource %>
+
+  <div class="field">
+    <%= f.label :email %><br/>
+    <%= f.email_field :email,
+                  autofocus: true,
+                  autocomplete: "email",
+                  value:
+                    (
+                      if resource.pending_reconfirmation?
+                        resource.unconfirmed_email
+                      else
+                        resource.email
+                      end
+                    ) %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Resend confirmation instructions" %>
+  </div>
+<% end %>
+<div>
