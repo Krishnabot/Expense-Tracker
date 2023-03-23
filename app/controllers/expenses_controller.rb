@@ -4,17 +4,17 @@ class ExpensesController < ApplicationController
   before_action :set_group
   before_action :set_expense, only: %i[show edit update destroy]
 
-  def index; end
-
-def new
-  @groups = Group.where(user_id: current_user.id).includes(:expenses)
-  expense = Expense.new
-  expense.group_ids = @group.id
-  respond_to do |format|
-    format.html { render :new, locals: { expense: } }
+  def index
   end
-end
 
+  def new
+    @expense = Expense.new
+    @expense.group_ids = @group.id
+    @groups = @group.expenses.includes(:groups)
+    respond_to do |format|
+      format.html { render :new }
+    end
+  end
 
   def create
     new_expense = Expense.new(expense_params)
@@ -26,7 +26,7 @@ end
           redirect_to group_path(new_expense.group_ids)
         else
           flash.now[:alert] = 'Error: transaction could not be saved'
-          render :new, locals: { expense: }
+          render :new, locals: { expense: new_expense }
         end
       end
     end
@@ -42,10 +42,9 @@ end
     @group = Group.find(params[:group_id])
   end
 
-def set_expense
-  @expense = Expense.includes(:groups).find(params[:id])
-end
-
+  def set_expense
+    @expense = Expense.includes(:groups).find(params[:id])
+  end
 
   def expense_params
     params.require(:new_expense).permit(:name, :amount, group_ids: [])
