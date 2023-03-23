@@ -6,14 +6,15 @@ class ExpensesController < ApplicationController
 
   def index; end
 
-  def new
-    @groups = Group.where(user_id: current_user.id)
-    expense = Expense.new
-    expense.group_ids = @group.id
-    respond_to do |format|
-      format.html { render :new, locals: { expense: } }
-    end
+def new
+  @groups = Group.where(user_id: current_user.id).includes(:expenses)
+  expense = Expense.new
+  expense.group_ids = @group.id
+  respond_to do |format|
+    format.html { render :new, locals: { expense: } }
   end
+end
+
 
   def create
     new_expense = Expense.new(expense_params)
@@ -41,9 +42,10 @@ class ExpensesController < ApplicationController
     @group = Group.find(params[:group_id])
   end
 
-  def set_expense
-    @oexpense = Expense.find(params[:id])
-  end
+def set_expense
+  @expense = Expense.includes(:groups).find(params[:id])
+end
+
 
   def expense_params
     params.require(:new_expense).permit(:name, :amount, group_ids: [])

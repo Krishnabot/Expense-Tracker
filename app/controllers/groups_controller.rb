@@ -4,10 +4,11 @@ class GroupsController < ApplicationController
     @categories = current_user.groups
   end
 
-  def show
-    @category = Group.find(params[:id])
-    @expenses = @category.expenses.order(created_at: :desc)
-  end
+def show
+  @category = Group.includes(:expenses).find(params[:id])
+  @expenses = @category.expenses.order(created_at: :desc)
+end
+
 
   def new
     categorie = Group.new
