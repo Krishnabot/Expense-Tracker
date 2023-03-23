@@ -4,8 +4,7 @@ class ExpensesController < ApplicationController
   before_action :set_group
   before_action :set_expense, only: %i[show edit update destroy]
 
-  def index
-  end
+  def index; end
 
   def new
     @expense = Expense.new
