@@ -15,13 +15,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 12px 24px;
+  padding: 12px 24px !important;
   font-size: 2rem;
   text-align: center;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   color: $white;
   background-color: $app-btn-background !important;
-  border: 0.1px solid $white;
+  border: 0.1px solid $white !important;
+  border-radius: 0 !important;
   box-shadow: 0 0 0 20px $app-btn-background;
   text-decoration: none;
   margin-top: 2rem;

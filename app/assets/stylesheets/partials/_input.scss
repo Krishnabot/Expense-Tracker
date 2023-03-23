@@ -15,6 +15,7 @@ input[type="submit"] {
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  height: auto !important;
 
   &:hover {
     background-color: #218838;
