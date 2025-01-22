@@ -20,22 +20,20 @@ default: &default
   # For details on connection pooling, see Rails configuration guide
   # https://guides.rubyonrails.org/configuring.html#database-pooling
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  username: <%= ENV['POSTGRES_USERNAME'] %>
+  password: <%= ENV['POSTGRES_PASSWORD'] %>
 
 development:
   adapter: postgresql
   encoding: unicode
   database: expense_tracker_development
   pool: 5
-  username: postgres
-  password: postgres
 
 test:
   adapter: postgresql
   encoding: unicode
   database: expense_tracker_test
   pool: 5
-  username: postgres
-  password: postgres
 
 production:
   <<: *default
