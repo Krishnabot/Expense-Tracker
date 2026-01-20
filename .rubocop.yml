@@ -25,8 +25,8 @@ Metrics/AbcSize:
 Metrics/ClassLength:
   Max: 150
 Metrics/BlockLength:
-  IgnoredMethods: ['describe']
-  Max: 30
+  Max: 25
+  AllowedMethods: ['describe', 'context', 'it', 'test']
 
 Style/Documentation:
   Enabled: false
