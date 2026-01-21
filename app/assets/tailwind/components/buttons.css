@@ -1,0 +1,45 @@
+@layer components {
+  .btn-base, .btn-primary, .btn-secondary, .btn-action, .btn-outline {
+    @apply inline-flex items-center justify-center px-8 py-3 text-base font-semibold rounded-lg transition-all duration-200 text-center no-underline cursor-pointer border border-transparent leading-6;
+    
+    &:hover {
+      @apply -translate-y-0.5 shadow-md;
+    }
+    
+    &:active {
+      @apply translate-y-0;
+    }
+  }
+
+  .btn-primary {
+    @apply bg-primary text-text-inverted;
+
+    &:hover {
+      @apply bg-primary-dark;
+    }
+  }
+
+  .btn-secondary {
+    @apply bg-white text-primary border-primary;
+
+    &:hover {
+      @apply bg-primary-light;
+    }
+  }
+
+  .btn-action {
+    @apply bg-secondary text-text-inverted;
+
+    &:hover {
+      @apply bg-secondary-dark;
+    }
+  }
+
+  .btn-outline {
+    @apply bg-transparent text-text-inverted border-text-inverted;
+
+    &:hover {
+      @apply bg-white/10;
+    }
+  }
+}

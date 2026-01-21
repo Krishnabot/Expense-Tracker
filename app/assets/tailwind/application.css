@@ -1,9 +1,11 @@
 @import "tailwindcss";
+@import "./components/buttons.css";
 
 @theme {
   --color-primary: #3b82f6;     
   --color-primary-dark: #2563eb; 
   --color-primary-light: #eff6ff;
+  
   --color-secondary: #22c55e;    
   --color-secondary-dark: #16a34a; 
   
