@@ -1,1 +1,37 @@
 @import "tailwindcss";
+
+@theme {
+  --color-primary: #3b82f6;      
+  --color-primary-dark: #2563eb; 
+  --color-primary-light: #eff6ff; 
+  
+  --color-secondary: #22c55e;   
+  --color-secondary-dark: #16a34a; 
+  
+  --color-accent: #f59e0b;  
+  
+  --color-surface: #ffffff;
+  --color-surface-alt: #f9fafb;  
+  
+  --color-text-main: #111827;   
+  --color-text-muted: #4b5563; 
+  --color-text-inverted: #ffffff;
+}
+
+@layer components {
+  .btn-base {
+    @apply inline-flex items-center justify-center px-8 py-3 text-base font-semibold rounded-lg transition-all duration-200 text-center no-underline cursor-pointer border border-transparent leading-normal hover:-translate-y-0.5 hover:shadow-lg active:translate-y-0;
+  }
+
+  .btn-primary {
+    @apply btn-base bg-primary text-text-inverted hover:bg-primary-dark;
+  }
+
+  .btn-secondary {
+    @apply btn-base bg-white text-primary border-primary hover:bg-primary-light;
+  }
+  
+  .btn-action {
+    @apply btn-base bg-secondary text-text-inverted hover:bg-secondary-dark;
+  }
+}
