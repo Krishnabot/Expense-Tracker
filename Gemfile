@@ -58,6 +58,7 @@ group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "database_cleaner"
   gem "dotenv-rails"
+  gem "rspec-rails"
   gem "rubocop", "~> 1.76"
   gem "rubocop-performance", "~> 1.5"
   gem "rubocop-rails", "~> 2.3"
