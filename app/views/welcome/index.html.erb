@@ -1,6 +1,7 @@
-<div class="flex flex-col min-h-[calc(100vh-80px)] w-full">
-  <section class="relative overflow-hidden bg-gradient-to-br from-primary-light to-white py-16 md:py-24 lg:py-32">
-    <div class="max-w-7xl mx-auto text-center px-4">
+<div class="welcome-container w-full">
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="hero-content">
       <h1 class="text-4xl md:text-6xl font-extrabold text-text-main mb-6 tracking-tight">
         Master Your <span class="text-primary">Finances</span>
       </h1>
@@ -19,8 +20,10 @@
         <% end %>
       </div>
       
+      <!-- Hero Image / Visual (Optional placeholder or existing logo) -->
       <div class="mt-8 flex justify-center">
         <div class="relative w-full max-w-lg">
+           <!-- Using the existing logo or a placeholder visual -->
            <% if asset_path('logo.png') %>
              <%= image_tag "logo.png", class: "w-48 h-auto mx-auto drop-shadow-xl animate-fade-in-up" %>
            <% end %>
@@ -29,6 +32,7 @@
     </div>
   </section>
 
+  <!-- Features Section -->
   <section class="py-16 bg-surface-alt px-4">
     <div class="max-w-7xl mx-auto">
       <div class="text-center mb-12">
@@ -37,7 +41,7 @@
       </div>
       
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <div class="bg-surface rounded-2xl p-8 shadow-sm hover:-translate-y-1 transition-transform duration-200">
+        <div class="feature-card">
           <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4 text-primary text-2xl">
             📊
           </div>
@@ -45,7 +49,7 @@
           <p class="text-text-muted">Visualize your spending habits with intuitive charts and detailed reports.</p>
         </div>
         
-        <div class="bg-surface rounded-2xl p-8 shadow-sm hover:-translate-y-1 transition-transform duration-200">
+        <div class="feature-card">
           <div class="w-12 h-12 bg-secondary/10 rounded-lg flex items-center justify-center mb-4 text-secondary text-2xl">
             👥
           </div>
@@ -53,7 +57,7 @@
           <p class="text-text-muted">Split bills and manage shared expenses with friends, family, or roommates.</p>
         </div>
         
-        <div class="bg-surface rounded-2xl p-8 shadow-sm hover:-translate-y-1 transition-transform duration-200">
+        <div class="feature-card">
           <div class="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center mb-4 text-accent text-2xl">
             🔒
           </div>
@@ -64,6 +68,7 @@
     </div>
   </section>
   
+  <!-- Footer (Simple) -->
   <footer class="py-8 bg-white border-t border-neutral-100 mt-auto">
     <div class="max-w-7xl mx-auto px-4 text-center text-text-muted text-sm">
       &copy; <%= Time.current.year %> ExpenseTracker. All rights reserved.

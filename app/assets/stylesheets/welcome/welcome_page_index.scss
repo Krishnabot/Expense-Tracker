@@ -1,0 +1,42 @@
+@import '../components/buttons';
+
+/* Modular Welcome Page Styles */
+
+.welcome-container {
+  min-height: calc(100vh - 80px); /* Adjust based on navbar height */
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-section {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, var(--color-primary-light) 0%, white 100%);
+  padding: 4rem 1rem;
+  
+  @media (min-width: 768px) {
+    padding: 6rem 2rem;
+  }
+  
+  @media (min-width: 1024px) {
+    padding: 8rem 4rem;
+  }
+}
+
+.hero-content {
+  max-width: 80rem; /* 7xl */
+  margin: 0 auto;
+  text-align: center;
+}
+
+.feature-card {
+  background-color: var(--color-surface);
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  transition: transform 0.2s;
+  
+  &:hover {
+    transform: translateY(-5px);
+  }
+}
