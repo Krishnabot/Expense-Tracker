@@ -1,22 +1,72 @@
-<section class="app-section">
-  <div class="app-title">
-    <%= image_tag "logo.png" %>
-  </div>
+<div class="flex flex-col min-h-[calc(100vh-80px)] w-full">
+  <section class="relative overflow-hidden bg-gradient-to-br from-primary-light to-white py-16 md:py-24 lg:py-32">
+    <div class="max-w-7xl mx-auto text-center px-4">
+      <h1 class="text-4xl md:text-6xl font-extrabold text-text-main mb-6 tracking-tight">
+        Master Your <span class="text-primary">Finances</span>
+      </h1>
+      
+      <p class="text-lg md:text-xl text-text-muted mb-10 max-w-2xl mx-auto">
+        Track expenses, manage budgets, and achieve your financial goals with our intuitive and powerful expense tracker.
+      </p>
+      
+      <div class="flex flex-col sm:flex-row justify-center gap-4 mb-16">
+        <% if user_signed_in? %>
+          <%= link_to "Go to Dashboard", group_path, class: "btn-primary" %>
+          <%= link_to "Log Out", destroy_user_session_path, data: { turbo_method: :delete }, class: "btn-secondary" %>
+        <% else %>
+          <%= link_to "Get Started", new_user_registration_path, class: "btn-primary" %>
+          <%= link_to "Log In", new_user_session_path, class: "btn-secondary" %>
+        <% end %>
+      </div>
+      
+      <div class="mt-8 flex justify-center">
+        <div class="relative w-full max-w-lg">
+           <% if asset_path('logo.png') %>
+             <%= image_tag "logo.png", class: "w-48 h-auto mx-auto drop-shadow-xl animate-fade-in-up" %>
+           <% end %>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  <div class="welcome-btns">
-    <% if user_signed_in? %>
-      <%= link_to "Groups", group_path, class: "btn-primary" %>
-      <%= link_to "LOG OUT",
-      destroy_user_session_path,
-      method: :delete,
-      class: "btn-secondary" %>
-    <% else %>
-      <%= link_to new_user_session_path do %>
-        <button class="btn-primary">LOG IN</button>
-      <% end %>
-      <%= link_to new_user_registration_path do %>
-        <button class="btn-secondary">SIGN UP</button>
-      <% end %>
-    <% end %>
-  </div>
-</section>
+  <section class="py-16 bg-surface-alt px-4">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold text-text-main">Why Choose ExpenseTracker?</h2>
+        <p class="text-text-muted mt-4">Simple tools for complex financial lives.</p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="bg-surface rounded-2xl p-8 shadow-sm hover:-translate-y-1 transition-transform duration-200">
+          <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4 text-primary text-2xl">
+            📊
+          </div>
+          <h3 class="text-xl font-bold text-text-main mb-2">Smart Analytics</h3>
+          <p class="text-text-muted">Visualize your spending habits with intuitive charts and detailed reports.</p>
+        </div>
+        
+        <div class="bg-surface rounded-2xl p-8 shadow-sm hover:-translate-y-1 transition-transform duration-200">
+          <div class="w-12 h-12 bg-secondary/10 rounded-lg flex items-center justify-center mb-4 text-secondary text-2xl">
+            👥
+          </div>
+          <h3 class="text-xl font-bold text-text-main mb-2">Group Sharing</h3>
+          <p class="text-text-muted">Split bills and manage shared expenses with friends, family, or roommates.</p>
+        </div>
+        
+        <div class="bg-surface rounded-2xl p-8 shadow-sm hover:-translate-y-1 transition-transform duration-200">
+          <div class="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center mb-4 text-accent text-2xl">
+            🔒
+          </div>
+          <h3 class="text-xl font-bold text-text-main mb-2">Secure & Private</h3>
+          <p class="text-text-muted">Your financial data is encrypted and protected with industry-standard security.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <footer class="py-8 bg-white border-t border-neutral-100 mt-auto">
+    <div class="max-w-7xl mx-auto px-4 text-center text-text-muted text-sm">
+      &copy; <%= Time.current.year %> ExpenseTracker. All rights reserved.
+    </div>
+  </footer>
+</div>
