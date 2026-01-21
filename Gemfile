@@ -61,17 +61,14 @@ group :development, :test do
   gem 'database_cleaner'
   gem 'debug', platforms: %i[mri mingw x64_mingw]
   gem 'rspec-rails'
-  gem 'rubocop-rails', require: false
   gem 'rubocop-discourse', require: false
-
+  gem 'rubocop-rails', require: false
 end
-
 
 group :development do
   # Use console on exceptions pages [https://github.com/rails/web-console]
+  gem 'brakeman', require: false
   gem 'web-console'
-
-  
 
   # Add speed badges [https://github.com/MiniProfiler/rack-mini-profiler]
   # gem "rack-mini-profiler"
