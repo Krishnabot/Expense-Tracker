@@ -18,10 +18,10 @@ class GroupsController < ApplicationController
     @categorie = Group.new(group_params)
     @categorie.user = current_user
     if @categorie.save
-      flash[:notice] = 'Success: Category saved successfully'
+      flash[:notice] = "Success: Category saved successfully"
       redirect_to groups_path
     else
-      flash.now[:alert] = 'Fail: Category could not be saved'
+      flash.now[:alert] = "Fail: Category could not be saved"
       render :new
     end
   end

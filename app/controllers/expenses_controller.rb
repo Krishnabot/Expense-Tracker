@@ -21,10 +21,10 @@ class ExpensesController < ApplicationController
     respond_to do |format|
       format.html do
         if new_expense.save
-          flash[:notice] = 'Transaction saved successfully'
+          flash[:notice] = "Transaction saved successfully"
           redirect_to group_path(new_expense.group_ids)
         else
-          flash.now[:alert] = 'Error: transaction could not be saved'
+          flash.now[:alert] = "Error: transaction could not be saved"
           render :new, locals: { expense: new_expense }
         end
       end
